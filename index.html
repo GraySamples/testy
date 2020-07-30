@@ -1,0 +1,129 @@
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sacramento', cursive;
+  font-size: 1em;
+  margin: 0;
+  background: #000000;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  font-size: 3em;
+  color: #808080;
+  text-transform: none;
+  -webkit-transition: color 275ms ease;
+  transition: color 275ms ease;
+}
+
+.link:hover {
+  color: #333;
+}
+
+.link:hover~.hover-container .link-text {
+  opacity: 1;
+}
+
+.link:hover~.hover-container .image-container {
+  opacity: 1;
+}
+
+.link-text {
+  z-index: 2;
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 3em;
+  color: #fff;
+  text-transform: none;
+  pointer-events: none;
+  -webkit-clip-path: circle(75px at var(--x) var(--y));
+  clip-path: circle(75px at var(--x) var(--y));
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease;
+  transition: opacity 250ms ease;
+}
+
+.image-container {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease;
+  transition: opacity 250ms ease;
+}
+
+.image-inner {
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  width: 150px;
+  height: 150px;
+}
+
+.link-image {
+  display: block;
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 50%;
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+</style>
+<div class="container">
+  <a class="link" href="#">Emily Gray</a>
+  <span class="hover-container">
+    <span class="link-text" aria-hidden="true">Emily Gray</span>
+    <span class="image-container">
+      <span class="image-inner">
+        <img class="link-image" src="https://lh3.googleusercontent.com/_liUx3vE4jLoOdGDXVeWIGDbw6zR1Xs053me8CrzRJCWioCXIUlYVhM9c67ZrMbawUflYrhO0axubzLVgdely7u972RUr-3lyEkAcQrDZPFntHQ3QhRy5Oa2lZGZ34F2RHjFHBlxxs8JG79FVr61A7Jrggu-GKAYLkPj9FpYffMD0rl9Netr3QFneaqv-tOYF8lM9oMWdx_lr1irF2KKdwb99O79q5TpWtBIH8K-g8hiA7NFNaay1az87LxaacvxGKmran4Hjw67OTR1aKUSYp5wLfkEDokm3ZVUzWVSRtUUzcfAljJCyt3-W5nHBvj7c32pcj2unGu6OoYiINiS-S0ZtH68yScn4mkngVIpOHsp2GAWubMFjusZ4O8XJW1ViceVWwJbTXWlaFchaBgxiq5CGY6Le0McHG7-rNYEsMdFWHb3D_dbfExwoTCmX_BdrW9dzabZPtOyZ9KuHI2ZTvXx2HThFrQRGi2hEpa44JbR6DQ4o0n2qvCE4F4-sf5cBRCh-OuHaulyOcbQPqygR2jTZb9eUV3EGP_QZf_To9BZs7X9npRk37eeWrouHiMJgOGcHn-OT8HCwXtLNPkokw17OI-dCrudBZ08O3HVdVSiAEnZ0vd4PYHFbD7p4G0Xry47Qcjt8K3JFUB446gKS87h2tYtlLQX_1B27oq93JN02vK9aSCXrPMj53el3g=w478-h637-no?authuser=0" alt="Emily Gray" />
+      </span>
+    </span>
+  </span>
+</div>
